@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    var playAgain = confirm("Would you like to play rock paper scissors?");
+    console.log(playAgain);
+    var choices = ["r", "p","s"];
+    var userInput = prompt("Type r for Rock, p for Paper, or s for Scissors");
+        userInput = userInput.toLowerCase();
+
+    var comp = Math.floor(Math.random()*3);
+    var userNum = choices.indexOf(userInput);
+
+    console.log(comp);
+    console.log(userNum);
+
+while (playAgain == true){
+
+    if(comp==userNum){
+        alert("Tie: Play Again");
+    }
+
+    else if(userNum==0){
+        if(comp==1){
+            alert("Computer picked paper. YOU LOSE!!!");
+        }
+        else{
+            alert("Computer picked scissors. YOU WIN!!!!");
+        }
+    }    
+
+     else if(userNum==1){
+        if(comp==0){
+            alert("Computer picked Rock. YOU WIN!!!");
+        }
+        else{
+            alert("Computer picked scissors. YOU LOSE!!!!");
+        }
+    }   
+
+    else if(userNum==2){
+        if(comp==1){
+            alert("Computer picked Paper. YOU WIN!!!");
+        }
+        else{
+            alert("Computer picked rock. YOU LOSE!!!!");
+        }
+    } 
+
+    else {
+        playAgain = confirm("Would you like to play rock paper scissors?");
+    }    
+
+}
+</script>
+    
+</body>
+</html>
